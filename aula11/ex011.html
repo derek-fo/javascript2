@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Passaporte</title>
+</head>
+
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Você mora onde?: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="país()">
+    <div id="res"></div>
+    <script>
+
+
+        function país() {
+            var txtn = document.getElementById('txtnac')
+            var res = document.querySelector('div#res')
+            var nac = (txtn.value)
+
+            res.innerHTML = `<p>Você vive em <strong>${nac}.</strong></p>`
+
+            if (nac === 'Brasil') {
+                res.innerHTML = `<p>Você é brasileiro!</p>`
+            }
+            else {
+                res.innerHTML = `<p>Você é estrangeiro! </p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
